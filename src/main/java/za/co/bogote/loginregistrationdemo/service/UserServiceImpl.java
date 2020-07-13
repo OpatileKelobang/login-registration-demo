@@ -1,5 +1,7 @@
 package za.co.bogote.loginregistrationdemo.service;
 
+import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 import za.co.bogote.loginregistrationdemo.model.Role;
 import za.co.bogote.loginregistrationdemo.model.User;
@@ -29,5 +31,10 @@ public class UserServiceImpl implements UserService {
         );
 
         return userRepository.save(user);
+    }
+
+    @Override
+    public UserDetails loadUserByUsername(String s) throws UsernameNotFoundException {
+        return null;
     }
 }
