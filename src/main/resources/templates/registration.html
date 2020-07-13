@@ -4,9 +4,7 @@
     <meta charset="UTF-8">
     <title>Authentication</title>
     <link href="/css/style.css" rel="stylesheet">
-    <link href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" \
-          integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
-          crossorigin="anonymous" />
+    <link rel="stylesheet" href="/css/font-awesome.css">
 </head>
 <body>
 <h2>Sign Up | Registration Demo: Sign in/up Form</h2>
@@ -20,9 +18,10 @@
                 <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
             </div>
             <span>or use your email for registration</span>
-            <input type="text" placeholder="Name" />
-            <input type="email" placeholder="Email" />
-            <input type="password" placeholder="Password" />
+            <input id="firstName" type="text" placeholder="First Name" th:field="*{firstName}"/>
+            <input id="lastName" type="text" placeholder="Last Name" th:field="*{lastName}" />
+            <input id="regEmail" type="email" placeholder="Email" th:field="*{email}" />
+            <input id="regPassword" type="password" placeholder="Password" th:field="*{password}" />
             <button>Sign Up</button>
         </form>
     </div>
